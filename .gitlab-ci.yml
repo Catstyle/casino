@@ -1,0 +1,8 @@
+stages:
+    - test
+
+test:
+    stage: test
+    script:
+        - pip install coverage -i https://pypi.doubanio.com/simple
+        - python cover.py
