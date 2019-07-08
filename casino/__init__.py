@@ -4,4 +4,4 @@ from . import wordplate
 
 
 __all__ = ['mahjong', 'poker', 'wordplate']
-__version__ = '0.1.4'
+__version__ = '19.07.08'
