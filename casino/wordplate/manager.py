@@ -59,7 +59,7 @@ class Manager(object):
         if count == 2 and cards[0] is cards[1]:
             return True
 
-        if count == 0 and handcard.fixed_cards:
+        if count == 0 and (handcard.fixed_cards or handcard.used_cards):
             return True
 
         return any(self.combinations(cards))
