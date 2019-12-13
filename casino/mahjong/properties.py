@@ -61,8 +61,9 @@ def sub_combinations(tiles, joker_count=0):
             t1 = tiles[0]
             yield {'triplets': [[t1]], 'sequences': [],
                    'joker_count': joker_count - 2}
-            yield {'triplets': [], 'sequences': [[t1]],
-                   'joker_count': joker_count - 2}
+            if t1.suit in t1.NUMERIC_SUITS:
+                yield {'triplets': [], 'sequences': [[t1]],
+                       'joker_count': joker_count - 2}
         elif count == 2 and joker_count >= 1:
             t1, t2 = tiles
             if t1 is t2:
