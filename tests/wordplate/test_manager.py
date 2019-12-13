@@ -18,7 +18,7 @@ l10 = Card.LOWER_TEN
 u3 = Card.UPPER_THREE
 
 
-class MahjongTest(TestCase):
+class ManagerTest(TestCase):
 
     def setUp(self):
         self.manager = Manager()

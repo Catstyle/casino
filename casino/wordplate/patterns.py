@@ -10,7 +10,9 @@ class Normal(object):
 
     @staticmethod
     def validate(handcard, combinations, properties):
-        if not (combinations or handcard.fixed_cards or handcard.used_cards):
+        if not (combinations or
+                handcard.fixed_cards or
+                any(used for used in handcard.used_cards.values())):
             return False
 
         handcard.used_combs[:] = combinations
